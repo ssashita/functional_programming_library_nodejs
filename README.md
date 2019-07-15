@@ -193,25 +193,25 @@ Task.of(x).chain(f) = Task.of(f(x)).join() = f(x)`
 One of the simpler examples of a Functor (Monad) is the Maybe functor. Often times, we need to process values that may be null, and our code then needs to put in additional processing for null value handling. This often leads to the 'forest' of the design intent of your code getting lost amid the 'trees' of conditionals meant for  null and valid value processing. An example follows:
 
 
-  ` const getName=(obj)=>{
-  if (obj)
-     return obj.name;
-    else
-     throw new Error("undefined obj");
-  }
- const uppercase = str=>str.toUpperCase();
- const capitalize = (str)=>{
-    if (typeof str =='undefined')
-      throw new Error("undefined");
-    return str.toUpperCase();
- }
-var a={};
-console.log(getName(a));`
+  `const getName=(obj)=>{`
+  `if (obj)`
+     `return obj.name;`
+    `else`
+     `throw new Error("undefined obj");`
+  `}`
+ `const uppercase = str=>str.toUpperCase();`
+ `const capitalize = (str)=>{`
+    `if (typeof str =='undefined')`
+      `throw new Error("undefined");`
+    `return str.toUpperCase();`
+ `}`
+`var a={};`
+`console.log(getName(a));`
 
 This can quickly get complicated.
 
 
- `const getProperty=(obj,property)=>{
+ ` const getProperty=(obj,property)=>{
       if (obj) {
          if (property) {
             return obj[property];

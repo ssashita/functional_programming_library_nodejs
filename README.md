@@ -194,18 +194,31 @@ One of the simpler examples of a Functor (Monad) is the Maybe functor. Often tim
 
 
   `const getName=(obj)=>{`
+  
   `if (obj)`
+  
      `return obj.name;`
+     
     `else`
+    
      `throw new Error("undefined obj");`
+     
   `}`
+  
  `const uppercase = str=>str.toUpperCase();`
+ 
  `const capitalize = (str)=>{`
+ 
     `if (typeof str =='undefined')`
+    
       `throw new Error("undefined");`
+      
     `return str.toUpperCase();`
+    
  `}`
+ 
 `var a={};`
+
 `console.log(getName(a));`
 
 This can quickly get complicated.

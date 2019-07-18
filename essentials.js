@@ -1,3 +1,11 @@
+/**
+ * The code in this file is completely inspired by the great github book
+ * Professor Frisby's Mostly Adequate Guide to Functional Programming available at
+ * https://github.com/MostlyAdequate/mostly-adequate-guide
+ * Except a few lines that I changed, all the code is based off the Appendix A
+ * of the book
+ */
+
 // always :: a -> b -> a
 const always = curry((a,b)=>a);
 // compose :: ((a -> b), (b -> c),  ..., (y -> z)) -> a -> z
